@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+  <title>02-2 문자열 자료형</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1><p style="color:Navy;">02-2 문자열 자료형</p></h1>
+  <h3><p><li>문자열 자료형 만드는 4가지 방법</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    "Hello World"
+    <p>'Python is fun'</p>
+    <p>"""Life is too short, You need python"""</p>
+    '''Life is too short, You need python'''
+    <br><br>
+  </h4>
+  <h3><p><li>문자열에 따옴표 포함시키기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> food = "Python's favorite food is perl"
+    <p>>>> say = '"Python is very easy." he says.'</p>
+    <p>>>> food = 'Python＼'s favorite food is perl'</p>
+    >>> say = "＼"Python is very easy.＼" he says."
+    <br><br>
+  </h4>
+  <h4><p>역슬래시(＼)는 \키를 누르면 된다.</p></h4>
+  <h3><p><li>여러 줄로 이루어진 문자열</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    >>> multiline = "Life is too short＼nYou need python"
+  </h4>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> multiline='''
+    <p>... Life is too short</p>
+    <p>... You need python</p>
+    ... '''
+    <br><br>
+  </h4>
+  <h3><p><li>문자열 더해서 연결하기 (Concatenation)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> head = "Python"
+    <p>>>> tail = " is fun!"</p>
+    <p>>>> head + tail</p>
+    'Python is fun!'
+    <br><br>
+  </h4>
+  <h3><p><li>문자열 곱하기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "python"
+    <p>>>> a * 2</p>
+    'pythonpython'
+    <br><br>
+  </h4>
+  <h3><p><li>인덱싱(Indexing)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "Life is too short, You need Python"
+    <p>>>> a[0]</p>
+    <p>'L'</p>
+    <p>>>> a[12]</p>
+    <p>'s'</p>
+    <p>>>> a[-1]</p>
+    'n'
+    <br><br>
+  </h4>
+  <h4><p>파이썬은 0부터 숫자를 센다</p></h4>
+  <h3><p><li>슬라이싱(Slicing)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "Life is too short, You need Python"
+    <p>>>> a[0:4]</p>
+    'Life'
+    <br><br>
+    </h4>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "20010331Rainy"
+    <p>>>> date = a[:8]</p>
+    <p>>>> weather = a[8:]</p>
+    <p>>>> date</p>
+    <p>'20010331'</p>
+    <p>>>> weather</p>
+    'Rainy'
+    <br><br>
+  </h4>
+  <h4><p>a[이상:미만:간격]</p><h4>
+  <h3><p><li>문자열 포매팅</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> "I eat %d apples." % 3
+    <p>'I eat 3 apples.'</p>
+    <p>>>> number = 10</p>
+    <p>>>> day = "three"</p>
+    <p>>>> "I ate %d apples. so I was sick for %s days." % (number, day)</p>
+    'I ate 10 apples. so I sick for three days'
+    <br><br>
+  </h4>
+  <h4><p>%d : 정수 / %s : 문자열 / %f : 실수</p></h4>
+  <h3><p><li>정렬과 공백</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> "%10s" % "hi"
+    <p>'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hi'</p>
+    <p>>>> "%-10sjane." % 'hi'</p>
+    'hi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jane.'
+    <br><br>
+  </h4>
+  <h4><p>html에선 '& nbsp;'라고 쓰면 공백문자가 삽입된다 (&랑nbsp;중간에 띄어쓰기 X (표시하려고 띄어쓰기 한거임))</p></h4>
+  <h3><p><li>소수점 표현</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> "%0.4f" % 3.42134234
+    <p>'3.4213'</p>
+    <p>>>> "10.4f" % 3.42134234</p>
+    '&nbsp;&nbsp;&nbsp;&nbsp;3.4213'
+    <br><br>
+  </h4>
+  <h4><p>''안에 10개의 칸이 생성된다.</p></h4>
+  <h3><p><li>문자열 개수 세기(count)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "hobby"
+    <p>>>> a.count('b')</p>
+    2
+    <br><br>
+  </h4>
+  <h4><p>변수 a안에 'b'가 몇개있는지 알려준다</p></h4>
+  <h3><p><li>위치 알려주기1(find)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "Python is best choice"
+    <p>>>> a.find('b')</p>
+    <p>10</p>
+    <p>>>> a.find('k')</p>
+    -1
+    <br><br>
+  </h4>
+  <h4><p>변수 a안에 'b'가 몇번째에 있는지 알려주고, 변수 a안에 'k'가 없으면 -1이라 뜬다</p></h4>
+  <h3><p><li>위치 알려주기2(index)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "Life is too short"
+    <p>>>> a.index('t')</p>
+    <p>8</p>
+    <p>>>> a.index('k')</p>
+    <p>Traceback (most recent call last):</p>
+    <p>File "〈stdin〉", line 1, in 〈module〉</p>
+    ValueError: substring not found
+    <br><br>
+  </h4>
+  <h4><p>변수 a안에 't'가 몇번째에 있는지 알려주고, 변수 a안에 'k'가 없으면 오류가 뜬다</p></h4>
+  <h3><p><li>문자열 삽입(join)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = ","
+    <p>>>> a.join('abcd')</p>
+    'a,b,c,d'
+    <br><br>
+  </h4>
+  <h4><p>'abcd'사이에 쉼표를 삽입하여 'a,b,c,d'가 출력된다</p></h4>
+  <h3><p><li>소문자를 대문자로 바꾸기(upper)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "hi"
+    <p>>>> a.upper()</p>
+    'HI'
+    <br><br>
+  </h4>
+  <h3><p><li>대문자를 소문자로 바꾸기(lower)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "HI"
+    <p>>>> a.lower()</p>
+    'hi'
+    <br><br>
+  </h4>
+  <h3><p><li>양쪽 공백 지우기(strip)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = " hi "
+    <p>>>> a.strip()</p>
+    'hi'
+    <br><br>
+  </h4>
+  <h3><p><li>문자열 바꾸기(replace)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "Life is too short"
+    <p>>>> a.replace("Life", "Your leg")</p>
+    'Your leg is too short'
+    <br><br>
+  </h4>
+  <h4><p>"Life"라는 문자를 "Your leg"라는 문자로 교체한다</p></h4>
+  <h3><p><li>문자열 나누기(split)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = "Life is too short"
+    <p>>>> a.split()</p>
+    <p>['Life', 'is', 'too', 'short']</p>
+    <p>>>> a = "a:b:c:d"</p>
+    <p>>>> a.split(':')</p>
+    ['a', 'b', 'c', 'd']
+    <br><br>
+  </h4>
+  <br>
+  <h1><p><a href="index.html" title="메인화면으로 가기">메인화면으로 가기</a></p></h1>
+</body>
+</html>

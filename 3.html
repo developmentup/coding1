@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+  <title>02-3 리스트 자료형</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <h1><p style="color:Navy;">02-3 리스트 자료형</p></h1>
+  <h3><p><li>1, 3, 5, 7, 9라는 숫자 모음</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> odd = [1, 3, 5, 7, 9]
+    <br><br>
+  </h4>
+  <h4><p>리스트는 변수를 한번에 관리한다</p></h4>
+  <h3><p><li>리스트명 = [요소1, 요소2, 요소3, ...]</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [ ]
+    <p>>>> b = [1, 2, 3]</p>
+    <p>>>> c = ['Life', 'is', 'too', 'short']</p>
+    <p>>>> d = [1, 2, 'Life', 'is']</p>
+    >>> e = [1, 2, ['Life', 'is']]
+    <br><br>
+  </h4>
+  <h4><p>리스트는 변수를 한번에 관리한다</p></h4>
+  <h3><p><li>리스트의 인덱싱</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a[0]</p>
+    <p>1</p>
+    <p>>>> a[0] + a[2]</p>
+    <p>4</p>
+    <p>>>> a[-1]</p>
+    3
+    <br><br>
+  </h4>
+  <h4><p>-는 뒤에서부터</p></h4>
+  <h3><p><li>리스트의 슬라이싱</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3, 4, 5]
+    <p>>>> a[0:2]</p>
+    <p>[1, 2]</p>
+    <p>>>> b = a[:2]</p>
+    <p>>>> c = a[2:]</p>
+    <p>>>> b</p>
+    <p>[1, 2]</p>
+    <p>>>> c</p>
+    [3, 4, 5]
+    <br><br>
+  </h4>
+  <h3><p><li>리스트 더하기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> b = [4, 5, 6]</p>
+    <p>>>> a + b</p>
+    [1, 2, 3, 4, 5, 6]
+    <br><br>
+  </h4>
+  <h3><p><li>리스트 반복하기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a * 3</p>
+    [1, 2, 3, 1, 2, 3, 1, 2, 3]
+    <br><br>
+  </h4>
+  <h3><p><li>리스트에서 하나의 값 수정하기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>>a[2] = 4</p>
+    <p>>>> a</p>
+    [1, 2, 4]
+    <br><br>
+  </h4>
+  <h3><p><li>리스트에서 연속된 범위의 값 수정하기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a[1:2]</p>
+    <p>[2]</p>
+    <p>>>> a[1:2] = ['a', 'b', 'c']</p>
+    <p>>>> a</p>
+    [1, 'a', 'b', 'c', 3]
+    <br><br>
+  </h4>
+  <h3><p><li>[ ] 사용해 리스트 요소 삭제하기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 'a', 'b', 'c', 4]
+    <p>>>> a[1:3] = [ ]</p>
+    <p>>>> a</p>
+    [1, 'c', 4]
+    <br><br>
+  </h4>
+  <h4><p>a[1:3] = [ ]에서 [ 와 ] 사이에 띄어쓰기는 못알아볼까봐 표시하려고 한거지 실제론 띄어쓰기 안씀</p></h4>
+  <h3><p><li>del 함수 사용해 리스트 요소 삭제하기</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 'a', 'b', 'c', 4]
+    <p>>>> a[1:3] = [ ]</p>
+    <p>>>> a</p>
+    <p>[1, 'c', 4]</p>
+    <p>>>> del a[1]</p>
+    <p>>>> a</p>
+    [1, 4]
+    <br><br>
+  </h4>
+  <h3><p><li>리스트에 요소 추가(append)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a.append(4)</p>
+    <p>>>> a</p>
+    [1, 2, 3, 4]
+    <br><br>
+  </h4>
+  <h4><p>변수 a의 리스트에 4라는 요소를 추가한다</p></h4>
+  <h3><p><li>리스트 정렬(sort)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 4, 3, 2]
+    <p>>>> a.sort()</p>
+    <p>>>> a</p>
+    [1, 2, 3, 4]
+    <br><br>
+  </h4>
+  <h4><p>말그대로 리스트를 정렬하는거다</p></h4>
+  <h3><p><li>리스트 뒤집기(reverse)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = ['a', 'c', 'b']
+    <p>>>> a.reverse()</p>
+    <p>>>> a</p>
+    ['b', 'c', 'a']
+    <br><br>
+  </h4>
+  <h4><p>말그대로 리스트를 뒤집는거다</p></h4>
+  <h3><p><li>위치 반환(index)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a.index(3)</p>
+    <p>2</p>
+    <p>>>> a.index(1)</p>
+    0
+    <br><br>
+  </h4>
+  <h4><p>위치 찾는 명령어인데 a.index(3)에서 3이라는 숫자가 어디에 위치해 있는지 알려준다</p></h4>
+  <h3><p><li>리스트에 요소 삽입(insert)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a.insert[0, 4]</p>
+    [4, 1, 2, 3]
+    <br><br>
+  </h4>
+  <h4><p>변수 a의 리스트의 0번째 위치에 4라는 요소를 삽입한다</p></h4>
+  <h3><p><li>리스트 요소 제거(remove)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3, 1, 2, 3]
+    <p>>>> a.remove(3)</p>
+    [1, 2, 1, 2, 3]
+    <br><br>
+  </h4>
+  <h4><p>변수 a의 리스트에 있는 3이라는 요소를 제거한다 (첫번째거만 지워지나봄)</p></h4>
+  <h3><p><li>리스트 요소 끄집어내기(pop)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a.pop()</p>
+    <p>3</p>
+    <p>>>> a</p>
+    [1, 2]
+    <br><br>
+  </h4>
+  <h4><p>뒤에서부터 하나씩 끄집어낸다</p></h4>
+  <h3><p><li>리스트에 포함된 요소 x의 개수 세기(count)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3, 1]
+    <p>>>> a.count(1)</p>
+    2
+    <br><br>
+  </h4>
+  <h4><p>a.count(1)에서 1이라는 값의 개수를 센다</p></h4>
+  <h3><p><li>리스트 확장(extend)</li></p></h3>
+  <h4 style="background-color:Gainsboro;">
+    <br>
+    >>> a = [1, 2, 3]
+    <p>>>> a.extend([4, 5])</p>
+    <p>>>> a</p>
+    <p>[1, 2, 3, 4, 5]</p>
+    <p>>>> b = [6, 7]</p>
+    <p>>>> a.extend(b)</p>
+    <p>>>> a</p>
+    [1, 2, 3, 4, 5, 6, 7]
+    <br><br>
+  </h4>
+  <h4><p>a.extend([4, 5])에서 변수a의 리스트에 4, 5의 리스트를 추가한다</p></h4>
+  <br>
+  <h1><p><a href="index.html" title="메인화면으로 가기">메인화면으로 가기</a></p></h1>
+</body>
+</html>
